@@ -1,7 +1,8 @@
 {
     "env": {
         "es2021": true,
-        "node": true
+        "node": true,
+        "jest": true
     },
     "extends": [
         "airbnb-base"
@@ -15,6 +16,13 @@
         "eslint-plugin-import-helpers"
     ],
     "rules": {
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "ts": "never"
+        }
+      ],
       "import-helpers/order-imports": [
         "error",
         {
@@ -33,5 +41,10 @@
           }
         }
       ]
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
     }
 }
