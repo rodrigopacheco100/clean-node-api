@@ -1,50 +1,56 @@
 {
-    "env": {
-        "es2021": true,
-        "node": true,
-        "jest": true
-    },
-    "extends": [
-        "airbnb-base"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
-    "plugins": [
-        "@typescript-eslint",
-        "eslint-plugin-import-helpers"
-    ],
-    "rules": {
-      "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "ts": "never"
-        }
-      ],
-      "import-helpers/order-imports": [
-        "error",
-        {
-          "newlinesBetween": "always",
-          "groups": [
-            "module",
-            [
-              "parent",
-              "sibling",
-              "index"
-            ]
-          ],
-          "alphabetize": {
-            "order": "asc",
-            "ignoreCase": true
-          }
-        }
-      ]
-    },
-    "settings": {
-      "import/resolver": {
-        "typescript": {}
+  "env": {
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers"
+  ],
+  "rules": {
+    "react/prop-types": "off",
+    "import/prefer-default-export": "off",
+    "class-methods-use-this": "off",
+    "no-useless-constructor": "off",
+    "no-console": "off",
+    "no-shadow": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
       }
+    ],
+    "import-helpers/order-imports": [
+      "error",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "module",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
     }
+  }
 }
